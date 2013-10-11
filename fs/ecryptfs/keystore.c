@@ -1220,8 +1220,7 @@ decrypt_pki_encrypted_session_key(struct ecryptfs_auth_tok *auth_tok,
 out:
 	if (msg)
 		kfree(msg);
-	if (payload)
-		kfree(payload);
+	kfree(payload);
 	return rc;
 }
 
