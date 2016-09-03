@@ -1295,7 +1295,6 @@ int mdss_mdp_overlay_kickoff(struct msm_fb_data_type *mfd,
 #if defined(CONFIG_FB_MSM_MIPI_SAMSUNG_OCTA_CMD_WQHD_PT_PANEL)
 		int te_ret = 0;
 #endif
-	LIST_HEAD(destroy_pipes);
 
 	ATRACE_BEGIN(__func__);
 	if (ctl->shared_lock) {
