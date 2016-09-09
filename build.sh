@@ -12,7 +12,7 @@ clear
 TARGET_DEVICE=SC02F
 KERNEL_DEFCONFIG="msm8974_sec_js01lte_dcm_defconfig"
 AK2_BRANCH="sc02f"
-TOOLCHAIN_VER=arm-eabi-4.8
+TOOLCHAIN_VER=arm-linux-androideabi-4.9
 
 # Resources
 THREAD="-j$(grep -c ^processor /proc/cpuinfo)"
@@ -29,7 +29,7 @@ AK_VER="$TARGET_DEVICE-$ANDROID_VERSION-$VER-AOSP-KERNEL"
 
 # Vars
 export LOCALVERSION=-`echo $TARGET_DEVICE-$VER`
-export CROSS_COMPILE="$TOOLCHAIN_DIR/$TOOLCHAIN_VER/bin/arm-eabi-"
+export CROSS_COMPILE="$TOOLCHAIN_DIR/$TOOLCHAIN_VER/bin/arm-linux-androideabi-"
 export ARCH=arm
 export SUBARCH=arm
 export KBUILD_BUILD_USER=lawn
