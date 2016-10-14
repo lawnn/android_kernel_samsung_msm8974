@@ -359,7 +359,6 @@ static int boost_migration_notify(struct notifier_block *nb,
 	* because of CPU hotplug.
 	*/
 	if (!atomic_cmpxchg(&s->being_woken, 0, 1)) {
-		wake_up(&s->sync_wq);
 		atomic_set(&s->being_woken, 0);
 	}
 	return NOTIFY_OK;
